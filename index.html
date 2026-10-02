@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Traveloop</title>
     <link rel="icon" href="traveloop/tl icon.jpeg" type="image/jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css"> 
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <header class="top-bar">
@@ -29,15 +32,15 @@
                 </div>
                 <div class="field"> 
                 <span class="label">  <i class="fa-solid fa-calendar"></i>  Check-in</span><br>
-                <input type="date" id="date" required>
+                <input type="date" id="checkin" required>
                 </div>
                 <div class="field">
                 <span class="label">  <i class="fa-solid fa-calendar"></i>  Check-out</span><br>
-                <input type="date" id="date" required>
+                <input type="date" id="checkout" required>
                 </div>
                 <div class="field">
                 <span class="label">  <i class="fa-solid fa-users-line"></i>  Guests</span><br>
-                <input type="number" id="guests" placeholder="Number of guests" required>
+                <input type="number" id="guests" placeholder="Number of guests" min="1" max="20" value="2" required>
                 </div>
                 <div class="field">
                 <button id="btn" type="submit">Search</button>
@@ -47,18 +50,18 @@
              <div id="company"> 
                 <a href="https://www.agoda.com/" target="_blank"> <img src="traveloop/Agoda_logo_2019.svg.png" alt="agoda"></a>
                 <a href="https://www.booking.com/" target="_blank"> <img src="traveloop/Booking.com_logo.svg.png" alt="booking.com"></a>
-                <a href="https://www.hotels.com/?utm_source=chatgpt.com" target="_blank"> <img src="traveloop/Hotels.com_Logo_2023.svg.png" alt="hotels.com"></a>
+                <a href="https://www.hotels.com/" target="_blank"> <img src="traveloop/Hotels.com_Logo_2023.svg.png" alt="hotels.com"></a>
                 <a href="https://www.makemytrip.com/" target="_blank"> <img src="traveloop/mmt.png" alt="makemytrip"></a>
                 <a href="https://all.accor.com/" target="_blank"> <img src="traveloop/Accor_Live_Limitless_29.webp" alt="ALL"></a>
                 <a href="https://www.trip.com/" target="_blank"> <img src="traveloop/trip.png" alt="trip.com"></a>
-                <a href="https://www.oyorooms.com/?utm_source=chatgpt.com" target="_blank"> <img src="traveloop/oyo.jpg" alt="oyo.com" sizes=></a>
-                <a href="https://www.trivago.com/en-IN?utm_source=chatgpt.com" target="_blank"> <img src="traveloop/trivago.png" alt="trivago.com"></a>
-                <a href="https://www.google.com/search?q=traveling+websites&oq=traveli&gs_lcrp=EgZjaHJvbWUqDQgCEAAYkQIYgAQYigUyBggAEEUYOTIKCAEQABixAxiABDINCAIQABiRAhiABBiKBTINCAMQABiRAhiABBiKBTINCAQQABiRAhiABBiKBTINCAUQABiRAhiABBiKBTINCAYQABiRAhiABBiKBTIKCAcQABixAxiABDIKCAgQABixAxiABDIHCAkQABiABNIBCDc0ODRqMGo3qAIIsAIB8QXXsPSR4qodn_EF17D0keKqHZ8&sourceid=chrome&ie=UTF-8" id="more"> +100 more</a> </div>
+                <a href="https://www.oyorooms.com/" target="_blank"> <img src="traveloop/oyo.jpg" alt="oyo.com"></a>
+                <a href="https://www.trivago.com/en-IN" target="_blank"> <img src="traveloop/trivago.png" alt="trivago.com"></a>
+                <a href="https://www.google.com/search?q=traveling+websites" target="_blank" id="more"> +100 more</a>
             </div>
     </main>
     <div id="deals">
     <h1 id="h2">Hot hotel deals right now</h1>
-    <a href="https://www.makemytrip.com/hotels/best-hotels-india.htm" id="click">See more deals </a>
+    <a href="https://www.makemytrip.com/hotels/best-hotels-india.htm" id="click" target="_blank">See more deals </a>
     </div>
     <main id="features">
          <div class="hotel-lists"> 
@@ -68,17 +71,15 @@
             <div class="like">
             <h3>Fairmont Jaipur</h3>
             <span class="heart"><i class="fa-regular fa-heart"></i></span></div>
-            <a href="https://www.makemytrip.com/hotels/fairmont_jaipur-details-jaipur.html" class="card-link">
+            <a href="https://www.makemytrip.com/hotels/fairmont_jaipur-details-jaipur.html" class="card-link" target="_blank">
             <p class="location">Jaipur, India</p>
-
             <div class="rating">
                 <span class="score">9.2</span>
                 <span>Excellent</span>
             </div>
-
             <p class="price">₹30,999 <span>/ night</span></p>
-            </div>
             </a>
+            </div>
            </div>
         </div>
         <div class="hotel-lists">
@@ -88,16 +89,15 @@
             <div class="like">
             <h3>Grand Hyatt Goa</h3>
             <span class="heart"><i class="fa-regular fa-heart"></i></span></div>
-            <a href="https://www.makemytrip.com/hotels/grand_hyatt_goa-details-goa.html" class="card-link">
+            <a href="https://www.makemytrip.com/hotels/grand_hyatt_goa-details-goa.html" class="card-link" target="_blank">
             <p class="location">Goa, India</p>
             <div class="rating">
                 <span class="score">9.0</span>
                 <span>Excellent</span>
             </div>
-
             <p class="price">₹21,000 <span>/ night</span></p>
-            </div>
             </a>
+            </div>
            </div>
         </div>
         <div class="hotel-lists">
@@ -107,16 +107,15 @@
             <div class="like">
             <h3>Taj Rishikesh Resort</h3>
             <span class="heart"><i class="fa-regular fa-heart"></i></span></div>
-            <a href="https://www.makemytrip.com/hotels/taj_rishikesh_resort_spa_uttarakhand-details-rishikesh.html" class="card-link">
+            <a href="https://www.makemytrip.com/hotels/taj_rishikesh_resort_spa_uttarakhand-details-rishikesh.html" class="card-link" target="_blank">
             <p class="location">Rishikesh, India</p>
-
             <div class="rating">
                 <span class="score">8.8</span>
                 <span>Excellent</span>
             </div>
             <p class="price">₹42,000 <span>/ night</span></p>
-            </div>
             </a>
+            </div>
            </div>
         </div>
         <div class="hotel-lists">
@@ -126,16 +125,16 @@
             <div class="like">
             <h3>The Leela Palace</h3>
             <span class="heart"><i class="fa-regular fa-heart"></i></span></div>
-            <a href="https://www.makemytrip.com/hotels/the_leela_palace_chennai-details-chennai.html" class="card-link">
+            <a href="https://www.makemytrip.com/hotels/the_leela_palace_chennai-details-chennai.html" class="card-link" target="_blank">
             <p class="location">Chennai, India</p>
             <div class="rating">
                 <span class="score">9.2</span>
                 <span>Excellent</span>
             </div>
             <p class="price">₹29,545 <span>/ night</span></p>
-        </div>
-        </a>
-        </div>
+            </a>
+            </div>
+           </div>
         </div>
         <div class="hotel-lists">
             <div class="hotel-card">
@@ -144,16 +143,16 @@
             <div class="like">
             <h3>The St. Regis Mumbai</h3>
             <span class="heart"><i class="fa-regular fa-heart"></i></span></div>
-            <a href="https://www.makemytrip.com/hotels/the_st_regis_mumbai-details-mumbai.html" class="card-link">
+            <a href="https://www.makemytrip.com/hotels/the_st_regis_mumbai-details-mumbai.html" class="card-link" target="_blank">
             <p class="location">Mumbai, India</p>
             <div class="rating">
                 <span class="score">9.2</span>
                 <span>Excellent</span>
             </div>
-            <p class="price">₹38,000<span>/ night</span></p>
-        </div>
-        </a>
-        </div>
+            <p class="price">₹38,000 <span>/ night</span></p>
+            </a>
+            </div>
+           </div>
         </div>
     </main>
 
@@ -166,11 +165,11 @@
             <div class="like">
             <h3>Jaipur</h3>
             <span class="heart"><i class="fa-regular fa-heart"></i></span></div>
-            <a href="https://www.trivago.in/en-IN/odr/hotels-jaipur-india?search=200-64989"  class="place-card-link">
+            <a href="https://www.trivago.in/en-IN/odr/hotels-jaipur-india?search=200-64989" class="place-card-link" target="_blank">
             <div class="price2"><div>4,801 <span>Hotels</span></div>
             <div>₹6,164 <span> Avg.</span></div></div>
-         </div>
-         </a>
+            </a>
+            </div>
            </div>
         </div>
         <div class="hotel-lists">
@@ -180,11 +179,11 @@
             <div class="like">
             <h3>Udaipur</h3>
             <span class="heart"><i class="fa-regular fa-heart"></i></span></div>
-            <a href="https://www.trivago.in/en-IN/odr/hotels-udaipur-india?search=200-73918" class="place-card-link">
+            <a href="https://www.trivago.in/en-IN/odr/hotels-udaipur-india?search=200-73918" class="place-card-link" target="_blank">
             <div class="price2"><div>2,508 <span>Hotels</span></div>
             <div>₹7,649 <span> Avg.</span></div></div>
-         </div>
-         </a>
+            </a>
+            </div>
            </div>
         </div>
         <div class="hotel-lists">
@@ -194,11 +193,11 @@
             <div class="like">
             <h3>Varanasi</h3>
             <span class="heart"><i class="fa-regular fa-heart"></i></span></div>
-            <a href="https://www.trivago.in/en-IN/odr/hotels-varanasi-india?search=200-73947" class="place-card-link">
+            <a href="https://www.trivago.in/en-IN/odr/hotels-varanasi-india?search=200-73947" class="place-card-link" target="_blank">
             <div class="price2"><div>2,767 <span>Hotels</span></div>
             <div>₹4,963 <span> Avg.</span></div></div>
-         </div>
-         </a>
+            </a>
+            </div>
            </div>
         </div>
         <div class="hotel-lists">
@@ -208,11 +207,11 @@
             <div class="like">
             <h3>Manali</h3>
             <span class="heart"><i class="fa-regular fa-heart"></i></span></div>
-            <a href="https://www.trivago.in/en-IN/srl/hotels-manali-india?search=200-136801;dr-20260107-20260110;drs-46;rc-1-2" class="place-card-link"> 
+            <a href="https://www.trivago.in/en-IN/srl/hotels-manali-india?search=200-136801;dr-20260107-20260110;drs-46;rc-1-2" class="place-card-link" target="_blank"> 
             <div class="price2" ><div>7,229 <span>Hotels</span></div>
             <div>₹8,200 <span> Avg.</span></div></div>
-            </div>
             </a>
+            </div>
            </div>
         </div>
         <div class="hotel-lists">
@@ -222,11 +221,11 @@
             <div class="like">
             <h3>Darjeeling</h3>
             <span class="heart"><i class="fa-regular fa-heart"></i></span></div>
-            <a href="https://www.trivago.in/en-IN/srl/hotels-darjeeling-india?search=200-80950;dr-20260107-20260110;drs-46;rc-1-2" class="place-card-link"></a>
+            <a href="https://www.trivago.in/en-IN/srl/hotels-darjeeling-india?search=200-80950;dr-20260107-20260110;drs-46;rc-1-2" class="place-card-link" target="_blank">
             <div class="price2"><div>5,223 <span>Hotels</span></div>
             <div>₹4,448 <span> Avg.</span></div></div>
+            </a>
             </div>
-        </a>
            </div>
         </div>
         <div class="hotel-lists">
@@ -236,15 +235,15 @@
             <div class="like">
             <h3>Mahabaleshwar</h3>
             <span class="heart"><i class="fa-regular fa-heart"></i></span></div>
-            <a href="https://www.trivago.in/en-IN/odr/hotels-mahabaleshwar-india?search=200-345078" class="place-card-link"></a>
+            <a href="https://www.trivago.in/en-IN/odr/hotels-mahabaleshwar-india?search=200-345078" class="place-card-link" target="_blank">
             <div class="price2"><div>1,183 <span>Hotels</span></div>
             <div>₹6,766 <span> Avg.</span></div></div>
+            </a>
             </div>
-        </a>
            </div>
         </div>
     </main>
-    <main class="benefits">
+    <main class="benefits" id="benefits">
        <div class="benefit-card">
          <img src="traveloop/SearchDesktop.svg" alt="Search_simply" >
          <div class="h3">Search simply</div>
@@ -271,36 +270,15 @@
             </div>
             <div id="social">
                 <h3>FOLLOW US</h3>
-                <a href="https://github.com/sudhanshu9437-cell" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/sudhanshu-ranjan-8a82b4372?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://x.com/Sudhanshu9437?t=h-g8EAns18Rn6361NF1nGg&s=09" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a>
-                <a href="https://www.instagram.com/kashyappp9?igsh=MWIxMWZsYTNmcnhmcg==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://github.com/sudhanshu9437-cell" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/sudhanshu-ranjan-8a82b4372?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://x.com/Sudhanshu9437?t=h-g8EAns18Rn6361NF1nGg&s=09" target="_blank" aria-label="X"><i class="fa-brands fa-square-x-twitter"></i></a>
+                <a href="https://www.instagram.com/kashyappp9?igsh=MWIxMWZsYTNmcnhmcg==" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
             </div>
         </div>
         <p class="copyright">© 2025 Traveloop. This website is a student project and is not affiliated with any travel company.</p>
     </footer>
 
- <script>
-document.querySelectorAll(".heart i").forEach(icon => {
-    icon.addEventListener("click", function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-
-        this.classList.toggle("active");
-
-        if (this.classList.contains("active")) {
-            this.classList.remove("fa-regular");
-            this.classList.add("fa-solid");
-        } else {
-            this.classList.remove("fa-solid");
-            this.classList.add("fa-regular");
-        }
-    });
-});
-</script>
- 
- 
-
-
+    <script src="script.js"></script>
 </body>
 </html>

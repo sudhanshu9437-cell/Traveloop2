@@ -63,7 +63,7 @@ https://github.com/sudhanshu9437-cell
 ---
 
 ## Live Link
-https://traveloop.netlify.app/
+https://sudhanshu9437-cell.github.io/Traveloop2/
 
 ---
 
